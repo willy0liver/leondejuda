@@ -1,0 +1,126 @@
+// prerequisites.component.scss
+:host {
+  .mat-mdc-row {
+    &.low {
+      background-color: #D3D3D3;
+    }
+    
+    &.medium {
+      background-color: #FFFACD;
+    }
+    
+    &.high {
+      background-color: #e8f196;
+    }
+    
+    &.excellent {
+      background-color: #90EE90;
+    }
+  }
+}
+
+
+// Estilos para la sección de información general
+.prerequisites-info {
+  margin: 24px;
+  
+  .mat-mdc-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    
+    .mat-mdc-card-content {
+      padding: 24px;
+      
+      .info-text {
+        margin: 12px 0;
+        line-height: 1.6;
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 16px;
+        
+        &:first-child {
+          margin-top: 0;
+        }
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Estilos para los paneles de expansión
+.prerequisites-detail {
+  margin: 24px;
+  
+  .mat-accordion {
+    .mat-expansion-panel {
+      margin-bottom: 16px;
+      border-radius: 8px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      .mat-expansion-panel-header {
+        height: 64px;
+        padding: 0 24px;
+        
+        .mat-panel-title {
+          align-items: center;
+          display: flex;
+          font-size: 16px;
+          
+          .mat-icon {
+            margin-right: 16px;
+            color: #1976d2;
+          }
+        }
+      }
+      
+      .mat-expansion-panel-content {
+        .mat-expansion-panel-body {
+          padding: 16px 24px;
+        }
+      }
+      
+      .mat-mdc-list {
+        padding: 8px 0;
+        
+        .mat-mdc-list-item {
+          height: auto;
+          margin-bottom: 12px;
+          font-size: 15px;
+          line-height: 1.5;
+          
+          h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: rgba(0, 0, 0, 0.87);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Estilos para la tabla
+.mat-mdc-row {
+  &.low { background-color: #D3D3D3; }
+  &.medium { background-color: #FFFACD; }
+  &.high { background-color: #e8f196; }
+  &.excellent { background-color: #90EE90; }
+}
+
+.sticky-table {
+  overflow: auto; /* Habilita el scroll si la tabla excede el tamaño disponible */
+}
+
+.sticky-header th {
+  position: sticky;
+  top: 0; /* Siempre visible al hacer scroll */
+  z-index: 2; /* Asegura que se muestre sobre las celdas */
+  background-color: white; /* Fondo blanco para que no se superponga con filas */
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); /* Sombra para mayor visibilidad */
+}

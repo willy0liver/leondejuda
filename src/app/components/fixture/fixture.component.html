@@ -1,0 +1,153 @@
+<mat-tab-group>
+  <mat-tab *ngFor="let week of weeks; let i = index" [label]="'Semana ' + getWeekNumber(week)">
+    <div class="week-details">
+      <div class="calendar-details">
+        <h3>Datos Generales</h3>
+        <table class="calendar-table">
+          <tr>
+            <th>Rival</th>
+            <td>{{ week.calendario.rival }}</td>
+          </tr>
+          <tr>
+            <th>Requisitos Periodo</th>
+            <td>{{ week.calendario.inicio_fin }}</td>
+          </tr>
+          <tr>
+            <th>Partido</th>
+            <td>{{ week.calendario.partido }}</td>
+          </tr>
+          <tr>
+            <th>Goles León</th>
+            <td>{{ week.calendario.goles_leon }}</td>
+          </tr>
+          <tr>
+            <th>Goles Rival</th>
+            <td>{{ week.calendario.goles_rival }}</td>
+          </tr>
+          <tr>
+            <th>Resultado</th>
+            <td [ngClass]="{
+                  'resultado-victoria': week.calendario.resultado === 'Victoria',
+                  'resultado-empate': week.calendario.resultado === 'Empate',
+                  'resultado-derrota': week.calendario.resultado === 'Derrota'
+                }">
+              {{ week.calendario.resultado }}
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div *ngIf="getKeys(week)[0] as firstKey">
+        <h3>Cumplimiento Requisitos - Semana {{ firstKey }}</h3>
+        <table name="Requisitos" mat-table [dataSource]="getSortedPlayers(week[firstKey])" class="mat-elevation-z8" *ngIf="isArray(week[firstKey])">
+          
+          <ng-container matColumnDef="nro">
+            <th mat-header-cell *matHeaderCellDef>Nro</th>
+            <td mat-cell *matCellDef="let player; let i = index">{{ i + 1 }}</td>
+        </ng-container>
+
+          <!-- Nombre Column -->
+          <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let player" 
+            [ngClass]="
+            {
+             'cumplimiento-max': player.cumplimiento === 100,
+             'cumplimiento-medio': player.cumplimiento >= 75 && player.cumplimiento < 100
+            }
+            "> {{ player.nombre }} </td>
+          </ng-container>
+      
+          <!-- Camiseta Column -->
+          <ng-container matColumnDef="camiseta">
+            <th mat-header-cell *matHeaderCellDef> Camiseta </th>
+            <td mat-cell *matCellDef="let player" [ngClass]="
+            {'cumplimiento-max': player.cumplimiento === 100,
+            'cumplimiento-medio': player.cumplimiento >= 75 && player.cumplimiento < 100
+            }"> {{ player.camiseta || 'N/A' }} </td>
+          </ng-container>
+      
+          <!-- KM Column -->
+          <ng-container matColumnDef="km">
+            <th mat-header-cell *matHeaderCellDef> 
+              <mat-panel-title>
+                  <mat-icon>directions_run</mat-icon> KM
+              </mat-panel-title>
+           </th>
+            <td mat-cell *matCellDef="let player" 
+            [ngClass]="{
+              'cumplimiento-max': player.cumplimiento === 100,
+              'cumplimiento-medio': player.cumplimiento >= 75 && player.cumplimiento < 100,
+              'cumplimiento-falta': player.km < 4
+            }"> 
+            {{ player.km }} 
+            </td>
+          </ng-container>
+      
+          <!-- Entrenamiento Column -->
+          <ng-container matColumnDef="entrenamiento">
+            <th mat-header-cell *matHeaderCellDef> 
+              <mat-panel-title>
+                <mat-icon>sports_soccer</mat-icon> Entrenar
+              </mat-panel-title>
+            </th>
+            <td mat-cell *matCellDef="let player" 
+            [ngClass]="{
+              'cumplimiento-max': player.cumplimiento === 100,
+              'cumplimiento-medio': player.cumplimiento >= 75 && player.cumplimiento < 100,
+              'cumplimiento-falta': player.entrenamiento === 'N'
+            }"> {{ player.entrenamiento }} </td>
+          </ng-container>
+      
+          <!-- Iglesia Column -->
+          <ng-container matColumnDef="iglesia">
+            <th mat-header-cell *matHeaderCellDef> 
+              <mat-panel-title>
+                  <mat-icon>church</mat-icon> Iglesia
+              </mat-panel-title>  
+            </th>
+            <td mat-cell *matCellDef="let player" 
+            [ngClass]="{
+              'cumplimiento-max': player.cumplimiento === 100,
+              'cumplimiento-medio': player.cumplimiento >= 75 && player.cumplimiento < 100,
+              'cumplimiento-falta': player.iglesia === 'N'
+            }"> {{ player.iglesia }} </td>
+          </ng-container>
+      
+          <!-- Caja Chica Column -->
+          <ng-container matColumnDef="cajachica">
+            <th mat-header-cell *matHeaderCellDef> 
+              <mat-panel-title>
+                  <mat-icon>account_balance_wallet</mat-icon> Caja Chica S/.
+              </mat-panel-title>
+            </th>
+            
+            <td mat-cell *matCellDef="let player" 
+            [ngClass]="{
+              'cumplimiento-max': player.cumplimiento === 100,
+              'cumplimiento-medio': player.cumplimiento >= 75 && player.cumplimiento < 100,
+              'cumplimiento-falta': player.cajachica < 20
+          }"> {{ player.cajachica }} </td>
+          </ng-container> 
+      
+          <!-- Cumplimiento Column -->
+          <ng-container matColumnDef="cumplimiento">
+            <th mat-header-cell *matHeaderCellDef> Cumplimiento </th>
+            <td mat-cell *matCellDef="let player" [ngClass]="{'cumplimiento-max': player.cumplimiento === 100,
+            'cumplimiento-medio': player.cumplimiento >= 75 && player.cumplimiento < 100}">
+              {{ player.cumplimiento.toFixed(2) }}%
+            </td>
+          </ng-container>
+      
+          <!-- Header Row -->
+          <tr mat-header-row *matHeaderRowDef="['nro','nombre', 'camiseta', 'km', 'entrenamiento', 'iglesia', 'cajachica', 'cumplimiento']"></tr>
+          <!-- Data Rows -->
+          <tr mat-row *matRowDef="let row; columns: ['nro','nombre', 'camiseta', 'km', 'entrenamiento', 'iglesia', 'cajachica', 'cumplimiento'];"></tr>
+        </table>
+        <p *ngIf="!isArray(week[firstKey])">No hay datos disponibles para esta semana.</p>
+      </div>
+      
+      
+    </div>
+  </mat-tab>
+</mat-tab-group>

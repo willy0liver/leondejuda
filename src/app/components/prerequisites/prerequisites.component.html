@@ -1,0 +1,174 @@
+<mat-tab-group>
+    <mat-tab label="Cumplimiento de Pre Requisitos">
+      <table mat-table [dataSource]="playersWithAverages" class="mat-elevation-z8 sticky-table">
+
+
+        <ng-container matColumnDef="nro">
+            <th mat-header-cell *matHeaderCellDef>Nro</th>
+            <td mat-cell *matCellDef="let player; let i = index">{{ i + 1 }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef matTooltip="Nombre del jugador">Nombre</th>
+          <td mat-cell *matCellDef="let player">{{player.nombre}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="AP">
+          <th mat-header-cell *matHeaderCellDef matTooltip="Acreditación pastoral">
+            <mat-panel-title>
+                <mat-icon>assignment_ind</mat-icon> AP
+            </mat-panel-title>
+          </th>
+          <td mat-cell *matCellDef="let player" [ngStyle]="{'color': player.AP < 100 ? 'red' : 'inherit'}">
+            {{player.AP}}%
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="CC">
+          <th mat-header-cell *matHeaderCellDef matTooltip="Certificación de Competencias">
+            <mat-panel-title>
+                <mat-icon>account_balance_wallet</mat-icon> CC en S/.
+            </mat-panel-title>
+          </th>
+          <td mat-cell *matCellDef="let player" [ngStyle]="{'color': player.CC < 30 ? 'red' : 'inherit'}">
+            S/. {{player.CC}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="RF">
+          <th mat-header-cell *matHeaderCellDef matTooltip="Requerimiento Físico 16 km">
+            <mat-panel-title>
+                <mat-icon>directions_run</mat-icon> RF (KM)
+            </mat-panel-title>
+          </th>
+          <td mat-cell *matCellDef="let player" [ngStyle]="{'color': player.RF < 16 ? 'red' : 'inherit'}">
+            {{player.RF}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="CI">
+          <th mat-header-cell *matHeaderCellDef matTooltip="Compromiso Iglesia">
+            <mat-panel-title>
+                <mat-icon>church</mat-icon> CI
+            </mat-panel-title>
+          </th>
+          <td mat-cell *matCellDef="let player" [ngStyle]="{'color': player.CI < 100 ? 'red' : 'inherit'}">
+            {{player.CI}}%
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="RT">
+          <th mat-header-cell *matHeaderCellDef matTooltip="Resultado Total">            
+            <mat-panel-title>
+                <mat-icon>verified_user</mat-icon> RT
+            </mat-panel-title>
+          </th>
+          <td mat-cell *matCellDef="let player" [ngStyle]="{'color': player.RT < 100 ? 'red' : 'inherit'}">
+            {{player.RT}}%
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="promedio">
+          <th mat-header-cell *matHeaderCellDef matTooltip="Promedio general">Promedio</th>
+          <td mat-cell *matCellDef="let player">{{player.promedio}}%</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="sticky-header"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="getRowClass(row)"></tr>
+      </table>
+
+    </mat-tab>
+    <!-- Add other tabs here -->
+    
+    <mat-tab label="Detalle de Pre Requisitos">
+      <div class="prerequisites-info mat-elevation-z1">
+        <mat-card>
+          <mat-card-content>
+            <p class="info-text">Cada Pre Requisito se califica del 0 al 100 que representa el porcentaje de cumplimiento</p>
+            <p class="info-text">Algunos pre requisitos solo pueden tener el valor de 0 o 100, por ejemplo Compromiso con el Reglamento Y Testimonio (RT)</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="prerequisites-detail">
+        <mat-accordion>
+          <!-- Acreditación Pastoral -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>assignment_ind</mat-icon>
+                AP - Acreditación Pastoral
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list>
+              <mat-list-item>• Para lo servidores activos este item está por defecto al 100%</mat-list-item>
+              <mat-list-item>• Para el resto de integrantes debe primero completar los otros pre requisitos</mat-list-item>
+              <mat-list-item>• Se gestionará la firma de la Acreditación Pastoral con el Pastor de la iglesia donde asisten</mat-list-item>
+            </mat-list>
+          </mat-expansion-panel>
+
+          <!-- Caja Chica -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>account_balance_wallet</mat-icon>
+                CC - Caja Chica
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list>
+              <mat-list-item>• Monto de la Caja Chica: S/. 30.00</mat-list-item>
+              <mat-list-item>• Este dinero les pertenece</mat-list-item>
+              <mat-list-item>• Se usará cuando haya un pago en conjunto o cuando al jugador le falte pagar el costo del campo y/o entrenamiento.</mat-list-item>
+              <mat-list-item>• Luego de abonar los 30 soles, semana a semana es responsabilidad de cada jugador mantener su caja chica en al menos 20 soles </mat-list-item>
+            </mat-list>
+          </mat-expansion-panel>
+
+          <!-- Requerimiento Físico -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>directions_run</mat-icon>
+                RF - Requerimiento Físico (KM)
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list>
+              <mat-list-item>• Como pre temporada se pide a cada jugador completar 16KM de recorrido</mat-list-item>
+              <mat-list-item>• Luego de esto se pedirá 4km por semana</mat-list-item>
+              <mat-list-item>• En el grupo promovemos convocatorias para correr juntos</mat-list-item>
+              <mat-list-item>• En promedio se puede correr/trotar 4km en 30 minutos</mat-list-item>
+            </mat-list>
+          </mat-expansion-panel>
+
+          <!-- Compromiso con la Iglesia -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>church</mat-icon>
+                CI - Compromiso con la Iglesia
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list>
+              <mat-list-item>• Se pide compartir con el grupo las actividades o programas en los que se participa</mat-list-item>
+              <mat-list-item>• El objetivo es no descuidar nuestra área espiritual y motivar a los demás</mat-list-item>
+              <mat-list-item>• Si sirven en el ministerio muchísimo mejor, siempre tenemos algo que dar</mat-list-item>
+            </mat-list>
+          </mat-expansion-panel>
+
+          <!-- Compromiso con el Reglamento -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>verified_user</mat-icon>
+                RT - Compromiso con el Reglamento y Testimonio
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list>
+              <mat-list-item>• Todo integrante de León de Judá debe comprometerse al reglamento interno</mat-list-item>
+              <mat-list-item>• Además de llevar un buen testimonio</mat-list-item>
+              <mat-list-item>• No se trata de juzgarnos, de lo contrario se trata de apoyarnos</mat-list-item>
+            </mat-list>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>

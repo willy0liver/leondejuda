@@ -1,0 +1,40 @@
+<div class="plantel-container">
+  <h1 class="titulo">Plantel - León de Judá</h1>
+
+  <div class="comando-tecnico">
+    <h2>Comando Técnico</h2>
+    <div class="grid">
+      <div class="card" *ngFor="let tecnico of comandoTecnico">
+        <img [src]="tecnico.foto" [alt]="tecnico.nombre" (click)="verFoto(tecnico.foto)" />
+        <p class="nombre">{{ tecnico.nombre }}</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="jugadores">
+    <h2>Jugadores</h2>
+    <div class="grid">
+      <div
+        class="card"
+        *ngFor="let jugador of jugadores"
+        [ngClass]="{ 'disabled': jugador.habilitado === 0 }"
+      >
+        <img
+          [src]="jugador.foto"
+          [alt]="jugador.apodo"
+          (click)="jugador.habilitado === 1 ? verFoto(jugador.foto) : mostrarMensaje(jugador.nombre)"
+        />
+        <p class="nombre">{{ jugador.apodo }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Popup para mostrar foto o mensaje -->
+  <div class="popup" *ngIf="popupMessage || selectedFoto">
+    <div class="popup-content">
+      <button class="close-button" (click)="cerrarFoto()">✖</button>
+      <img *ngIf="selectedFoto" [src]="selectedFoto" alt="Foto del Jugador" />
+      <p *ngIf="popupMessage" class="popup-message">{{ popupMessage }}</p>
+    </div>
+  </div>
+</div>

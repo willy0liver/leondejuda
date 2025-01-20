@@ -1,0 +1,72 @@
+/* Tabla para la sección de calendario */
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Encabezados */
+.calendar-table th {
+  text-align: left;
+  background-color: #e3f2fd; /* Azul claro */
+  padding: 10px;
+  color: #1976d2; /* Azul oscuro */
+  font-weight: bold;
+  width: 30%;
+}
+
+/* Celdas */
+.calendar-table td {
+  padding: 10px;
+  color: #333;
+  width: 70%;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Última fila sin borde */
+.calendar-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Tamaño de fuente uniforme */
+.calendar-table th,
+.calendar-table td {
+  font-size: 1rem;
+}
+
+/* Colorear el resultado según el valor */
+.calendar-table td.resultado-victoria {
+  background-color: #d4edda; /* Verde claro */
+  color: #155724; /* Verde oscuro */
+  font-weight: bold;
+}
+
+.calendar-table td.resultado-empate {
+  background-color: #fff3cd; /* Naranja claro */
+  color: #856404; /* Naranja oscuro */
+  font-weight: bold;
+}
+
+.calendar-table td.resultado-derrota {
+  background-color: #f8d7da; /* Rojo claro */
+  color: #721c24; /* Rojo oscuro */
+  font-weight: bold;
+}
+
+/* Cumplimiento al 100% - Fondo verde */
+.cumplimiento-max {
+  background-color: #d4edda; /* Verde claro */
+  color: #155724; /* Verde oscuro */
+  font-weight: bold;
+}
+
+/* Cumplimiento del 75% al 99% - Fondo Ambar */
+.cumplimiento-medio {
+  background-color: #e8f196; /* Verde claro */
+  color: #16050e; 
+}
+
+.cumplimiento-falta {
+  color: #e01e28; 
+}
