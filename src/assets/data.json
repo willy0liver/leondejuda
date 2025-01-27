@@ -1,33 +1,62 @@
 {
   "semanas":[
-	  {"1": [
-			{"km": 4, "entrenamiento": "N", "iglesia": "S", "cajachica": 10, "camiseta": 1, "nombre": "Juan Chilcon"},
-			{"km": 4, "entrenamiento": "S", "iglesia": "N", "cajachica": 30, "camiseta": 3, "nombre": "Irwin Vasquez"},
-			{"km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": 0, "camiseta": 4, "nombre": "Victor Mendoza"},
-			{"km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 4, "nombre": "Marco Paz"},
-			{"km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 30, "camiseta": 5, "nombre": "Junior Cabanillas"},
-			{"km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 6, "nombre": "Angello Salazar"},
-			{"km": 1, "entrenamiento": "S", "iglesia": "N", "cajachica": 20, "camiseta": 7, "nombre": "Cristian Villalobos"},
-			{"km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 8, "nombre": "Luis Hernandez"},
-			{"km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 9, "nombre": "Willy Morales"},
-			{"km": 4, "entrenamiento": "S", "iglesia": "N", "cajachica": 30, "camiseta": 10, "nombre": "Segundo Laynes"},
-			{"km": 4, "entrenamiento": "S", "iglesia": "N", "cajachica": 30, "camiseta": 11, "nombre": "Ivan Morales"},
-			{"km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 11, "nombre": "Tommy Huaman"},
-			{"km": 2, "entrenamiento": "N", "iglesia": "N", "cajachica": 4, "camiseta": 14, "nombre": "Jerson Galvez"},
-			{"km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 15, "camiseta": 16, "nombre": "Alexander Olano"},
-			{"km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 17, "nombre": "Yuhsef Julian"},
-			{"km": 1, "entrenamiento": "S", "iglesia": "N", "cajachica": 0, "camiseta": 18, "nombre": "Maycol Chavez"},
-			{"km": 1, "entrenamiento": "S", "iglesia": "N", "cajachica": 30, "camiseta": 19, "nombre": "Maximiliano Farroñan"},
-			{"km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 20, "nombre": "Julio Cotrina"},
-			{"km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 21, "nombre": "Cristofer Rimarachin"},
-			{"km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 23, "nombre": "Danny Miranda"},
-			{"km": 1, "entrenamiento": "S", "iglesia": "N", "cajachica": 30, "camiseta": 25, "nombre": "Gerson Barturen"},
-			{"km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 15, "camiseta": null, "nombre": "Anderson Ruiz"},
-			{"km": 4, "entrenamiento": "N", "iglesia": "S", "cajachica": 30, "camiseta": 93, "nombre": "Klismar Chinchay"}
-			],
-			"calendario": 
-			{"rival": "VIÑA FC", "inicio_fin": "Lunes 13 de Enero / Domingo 19 Enero - 2025", "goles_leon": 0,"goles_rival": 0,"resultado": "-","partido": "Lunes 20 Enero del 2025 / Partido Nro 3 / A las 9:50 pm" } 	
-		}
+	{"2": [
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": 8, "camiseta": 1, "nombre": "Juan Chilcon"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 3, "nombre": "Irwin Vasquez"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": -2, "camiseta": 4, "nombre": "Victor Mendoza"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": -2, "camiseta": 4, "nombre": "Marco Paz"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": 28, "camiseta": 5, "nombre": "Junior Cabanillas"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": -2, "camiseta": 6, "nombre": "Angello Salazar"},
+		  {"tipo": "N", "km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 18, "camiseta": 7, "nombre": "Cristian Villalobos"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 28, "camiseta": 9, "nombre": "Willy Morales"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "S", "iglesia": "N", "cajachica": 28, "camiseta": 8, "nombre": "Luis Hernandez"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": 28, "camiseta": 9, "nombre": "Gerson Bautista"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 28, "camiseta": 10, "nombre": "Segundo Laynes"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 28, "camiseta": 11, "nombre": "Ivan Morales"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": -2, "camiseta": 11, "nombre": "Tommy Huaman"},
+		  {"tipo": "N", "km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 5, "camiseta": 14, "nombre": "Jerson Galvez"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "N", "iglesia": "N", "cajachica": 13, "camiseta": 14, "nombre": "Anderson Ruiz"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": 13, "camiseta": 16, "nombre": "Alexander Olano"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 28, "camiseta": 17, "nombre": "Yuhsef Julian"},
+		  {"tipo": "N", "km": 2, "entrenamiento": "S", "iglesia": "N", "cajachica": 16, "camiseta": 18, "nombre": "Maycol Chavez"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 28, "camiseta": 19, "nombre": "Maximiliano Farroñan"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 28, "camiseta": 20, "nombre": "Julio Cotrina"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": -2, "camiseta": 21, "nombre": "Cristofer Rimarachin"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": 28, "camiseta": 23, "nombre": "Danny Miranda"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 28, "camiseta": 25, "nombre": "Gerson Barturen"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": 28, "camiseta": 93, "nombre": "Klismar Chinchay"}
+		  ],
+		  "calendario": 
+		  {"rival": "SHEKINA", "inicio_fin": "Lunes 21 de Enero / Domingo 27 Enero - 2025", "goles_leon": 0,"goles_rival": 0,"resultado": "-","partido": "Lunes 28 Enero del 2025 / Partido Nro 4 / A las 10:20 pm" } 	
+	  },
+	{"1": [
+		  {"tipo": "N", "km": 4, "entrenamiento": "N", "iglesia": "S", "cajachica": 10, "camiseta": 1, "nombre": "Juan Chilcon"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "N", "cajachica": 30, "camiseta": 3, "nombre": "Irwin Vasquez"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "S", "cajachica": 0, "camiseta": 4, "nombre": "Victor Mendoza"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 4, "nombre": "Marco Paz"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 30, "camiseta": 5, "nombre": "Junior Cabanillas"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 6, "nombre": "Angello Salazar"},
+		  {"tipo": "N", "km": 1, "entrenamiento": "S", "iglesia": "N", "cajachica": 20, "camiseta": 7, "nombre": "Cristian Villalobos"},
+		  {"tipo": "T", "km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 8, "nombre": "Luis Hernandez"},
+		  {"tipo": "T", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 9, "nombre": "Willy Morales"},
+		  {"tipo": "T", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 10, "nombre": "Segundo Laynes ⚽"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 11, "nombre": "Ivan Morales"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 11, "nombre": "Tommy Huaman"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "N", "iglesia": "S", "cajachica": 4, "camiseta": 14, "nombre": "Jerson Galvez"},
+		  {"tipo": "T", "km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 15, "camiseta": 16, "nombre": "Alexander Olano"},
+		  {"tipo": "N", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 17, "nombre": "Yuhsef Julian"},
+		  {"tipo": "T", "km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 15, "camiseta": 18, "nombre": "Maycol Chavez"},
+		  {"tipo": "N", "km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 19, "nombre": "Maximiliano Farroñan"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 20, "nombre": "Julio Cotrina"},
+		  {"tipo": "N", "km": 0, "entrenamiento": "N", "iglesia": "N", "cajachica": 0, "camiseta": 21, "nombre": "Cristofer Rimarachin"},
+		  {"tipo": "N", "km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 23, "nombre": "Danny Miranda"},
+		  {"tipo": "C", "km": 1, "entrenamiento": "S", "iglesia": "S", "cajachica": 30, "camiseta": 25, "nombre": "Gerson Barturen"},
+		  {"tipo": "T", "km": 4, "entrenamiento": "S", "iglesia": "S", "cajachica": 15, "camiseta": null, "nombre": "Anderson Ruiz"},
+		  {"tipo": "T", "km": 4, "entrenamiento": "N", "iglesia": "S", "cajachica": 30, "camiseta": 93, "nombre": "Klismar Chinchay"}
+		  ],
+		  "calendario": 
+		  {"rival": "VIÑA FC", "inicio_fin": "Lunes 13 de Enero / Domingo 19 Enero - 2025", "goles_leon": 1,"goles_rival": 4,"resultado": "Derrota","partido": "Lunes 20 Enero del 2025 / Partido Nro 3 / A las 9:50 pm" } 	
+	  }
   ]    
 }
   

@@ -37,7 +37,7 @@ export class PlantelComponent {
       apodo: 'Junior',
       nombre: 'Junior Cabanillas',
       numero: 5,
-      habilitado: 0,
+      habilitado: 1,
       foto: 'assets/jugadores/5_Junior.jpg',
     },
     {
@@ -55,6 +55,13 @@ export class PlantelComponent {
       foto: 'assets/jugadores/7_Cristian.jpg',
     },
     {
+      apodo: 'Willy',
+      nombre: 'Willy Morales',
+      numero: 7,
+      habilitado: 1,
+      foto: 'assets/jugadores/7_Willy.jpg',
+    },
+    {
       apodo: 'Luis',
       nombre: 'Luis Hernández',
       numero: 8,
@@ -62,11 +69,11 @@ export class PlantelComponent {
       foto: 'assets/jugadores/8_Luis.jpg',
     },
     {
-      apodo: 'Willy',
-      nombre: 'Willy Morales',
+      apodo: 'Bautista',
+      nombre: 'Gerson Bautista',
       numero: 9,
-      habilitado: 1,
-      foto: 'assets/jugadores/9_Willy.jpg',
+      habilitado: 0,
+      foto: 'assets/jugadores/9_Bautista.jpg',
     },
     {
       apodo: 'Peluche',
@@ -79,7 +86,7 @@ export class PlantelComponent {
       apodo: 'Ivan',
       nombre: 'Ivan Morales',
       numero: 11,
-      habilitado: 0,
+      habilitado: 1,
       foto: 'assets/jugadores/11_Ivan.jpg',
     },
     {
@@ -134,7 +141,7 @@ export class PlantelComponent {
     {
       apodo: 'Anderson',
       nombre: 'Anderson Ruiz',
-      numero: 0,
+      numero: 14,
       habilitado: 0,
       foto: 'assets/jugadores/0_Anderson.jpg',
     },
@@ -148,13 +155,13 @@ export class PlantelComponent {
     {
       apodo: 'Klismar',
       nombre: 'Klismar Chinchay',
-      numero: 0,
-      habilitado: 0,
+      numero: 93,
+      habilitado: 1,
       foto: 'assets/jugadores/0_Klismar.jpg',
     },
     {
-      apodo: 'Maicol',
-      nombre: 'Maicol Chávez',
+      apodo: 'Maycol',
+      nombre: 'Maycol Chávez',
       numero: 0,
       habilitado: 0,
       foto: 'assets/jugadores/0_Maicol.jpg',

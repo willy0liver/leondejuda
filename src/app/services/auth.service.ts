@@ -31,7 +31,8 @@ export class AuthService {
     "gersonbarturen@gmail.com",
     "anderdayan200324@gmail.com",
     "Klismarchinchayalvarez@gmail.com",
-    "williamrt169@gmail.com"
+    "williamrt169@gmail.com",
+    "gersonniverbautista@gmail.com"
   ];
 
   isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
