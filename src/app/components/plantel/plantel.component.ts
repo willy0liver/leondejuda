@@ -34,6 +34,13 @@ export class PlantelComponent {
       foto: 'assets/jugadores/4_Victor.jpg',
     },
     {
+      apodo: 'Marco',
+      nombre: 'Marco Paz',
+      numero: 4,
+      habilitado: 1,
+      foto: 'assets/jugadores/4_Marco.jpg',
+    },
+    {
       apodo: 'Junior',
       nombre: 'Junior Cabanillas',
       numero: 5,
@@ -165,13 +172,6 @@ export class PlantelComponent {
       numero: 0,
       habilitado: 0,
       foto: 'assets/jugadores/0_Maicol.jpg',
-    },
-    {
-      apodo: 'Marco',
-      nombre: 'Marco Paz',
-      numero: 0,
-      habilitado: 0,
-      foto: 'assets/jugadores/0_Marco.jpg',
     },
     // Agrega más jugadores aquí
   ];

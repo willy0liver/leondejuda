@@ -34,6 +34,14 @@
               {{ week.calendario.resultado }}
             </td>
           </tr>
+          <tr>
+            <th>Reglamento Aplicado</th>
+            <td>{{ week.calendario.reglamento_aplicado }}</td>
+          </tr>
+          <tr>
+            <th>Comentario</th>
+            <td>{{ week.calendario.comentario }}</td>
+          </tr>
         </table>
       </div>
 
@@ -55,7 +63,13 @@
              'cumplimiento-max': player.cumplimiento === 100,
              'cumplimiento-medio': player.cumplimiento >= 75 && player.cumplimiento < 100
             }
-            "> {{ player.nombre }} </td>
+            "> {{ player.nombre }} 
+            <span *ngIf="player.tipo === 'T'" title="Titular">✅</span>
+            <span *ngIf="player.tipo === 'C'" title="Cambio">🔄</span>
+            <span *ngFor="let goal of [].constructor(player.goles)" title="Gol">⚽</span>
+            <span *ngIf="player.tarjeta === 'A'" title="Tarjeta Amarilla">🟨</span>
+            <span *ngIf="player.tarjeta === 'R'" title="Tarjeta Roja">🟥</span>
+          </td>
           </ng-container>
       
           <!-- Camiseta Column -->
