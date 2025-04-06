@@ -12,6 +12,10 @@ export const routes: Routes = [
   { path: 'plantel', component: PlantelComponent },
   { path: 'metricas', component: MetricasComponent },
   {
+    path: 'metricas2',
+    loadComponent: () => import('./components/metricas/metricas.component').then(m => m.MetricasComponent)
+  },
+  {
     path: 'prerequisites',
     component: PrerequisitesComponent,
     canActivate: [authGuard], // Asegúrate de que este guard esté aquí

@@ -6,11 +6,13 @@ import { CommonModule } from '@angular/common';
 import { NgChartsModule } from 'ng2-charts';
 
 @Component({
+  standalone: true,
     selector: 'app-metricas',
     imports: [CommonModule, FormsModule, NgChartsModule],
-    templateUrl: './metricas.component.html',
-    styleUrl: './metricas.component.css'
+    templateUrl: './metricas.component.html',    
+    styleUrls: ['./metricas.component.css']
 })
+
 export class MetricasComponent implements OnInit{
   atributos = ['km', 'entrenamiento', 'iglesia', 'caja chica'];
   atributoSeleccionado = 'km';
