@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PlantelComponent } from './components/plantel/plantel.component';
 import { authGuard } from './guards/auth.guard'; // Importa el guard correctamente
 import { FixtureComponent } from './components/fixture/fixture.component';
+import { MetricasComponent } from './components/metricas/metricas.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,5 +16,10 @@ export const routes: Routes = [
     canActivate: [authGuard], // Asegúrate de que este guard esté aquí
   },  
   { path: 'fixture', component: FixtureComponent, canActivate: [authGuard],  },
+  {
+    path: 'metricas',
+    component: MetricasComponent,
+    canActivate: [authGuard], // Asegúrate de que este guard esté aquí
+  },  
   { path: '**', redirectTo: '/home' },
 ];

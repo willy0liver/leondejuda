@@ -1,0 +1,13 @@
+<div class="metricas-container">
+  <label for="atributo">Selecciona el atributo:</label>
+  <select id="atributo" [(ngModel)]="atributoSeleccionado" (change)="actualizarGrafico()">
+    <option *ngFor="let attr of atributos" [value]="attr">{{ attr }}</option>
+  </select>
+
+  <div style="display: block; max-width: 800px; margin-top: 20px">
+    <canvas baseChart
+            [data]="chartData"
+            [type]="'bar'">
+    </canvas>
+  </div>
+</div>

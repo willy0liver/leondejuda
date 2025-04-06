@@ -20,7 +20,8 @@ import { Observable } from 'rxjs';
           <li><a routerLink="/home">Inicio</a></li>
           <li><a routerLink="/plantel">Plantel</a></li>
           <li *ngIf="canViewPrerequisites | async"><a routerLink="/fixture">Fixture</a></li>
-          <li *ngIf="canViewPrerequisites | async"><a routerLink="/prerequisites">PreRequisitos</a></li>        
+          <li *ngIf="canViewPrerequisites | async"><a routerLink="/prerequisites">PreRequisitos</a></li>   
+          <li *ngIf="canViewPrerequisites | async"><a routerLink="/metricas">Metricas</a></li>        
         </ul>
 
         <div *ngIf="isAuthenticated | async; else loginTemplate" class="user-menu">
