@@ -4,13 +4,11 @@ import { HomeComponent } from './components/home/home.component';
 import { PlantelComponent } from './components/plantel/plantel.component';
 import { authGuard } from './guards/auth.guard'; // Importa el guard correctamente
 import { FixtureComponent } from './components/fixture/fixture.component';
-import { MetricasComponent } from './components/metricas/metricas.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'plantel', component: PlantelComponent },
-  { path: 'metricas', component: MetricasComponent },
   {
     path: 'metricas2',
     loadComponent: () => import('./components/metricas/metricas.component').then(m => m.MetricasComponent)
