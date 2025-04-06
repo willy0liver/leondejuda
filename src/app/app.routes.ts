@@ -10,16 +10,12 @@ export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'plantel', component: PlantelComponent },
+  { path: 'metricas', component: MetricasComponent },
   {
     path: 'prerequisites',
     component: PrerequisitesComponent,
     canActivate: [authGuard], // Asegúrate de que este guard esté aquí
   },  
   { path: 'fixture', component: FixtureComponent, canActivate: [authGuard],  },
-  {
-    path: 'metricas',
-    component: MetricasComponent,
-    canActivate: [authGuard], // Asegúrate de que este guard esté aquí
-  },  
   { path: '**', redirectTo: '/home' },
 ];

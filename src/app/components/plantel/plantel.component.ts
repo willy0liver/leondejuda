@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common'; // Importa CommonModule
     selector: 'app-plantel', // Si es standalone
     imports: [CommonModule], // Asegúrate de importar CommonModule aquí
     templateUrl: './plantel.component.html',
-    styleUrls: ['./plantel.component.scss']
+    styleUrls: ['./plantel.component.css']
 })
 export class PlantelComponent {
   selectedFoto: string | null = null;
