@@ -9,11 +9,10 @@ import { MatTableModule } from '@angular/material/table';
 
 
 @Component({
-  selector: 'app-fixture',
-  standalone: true,
-  imports: [MatTabsModule, MatListModule, MatIconModule,MatExpansionModule,CommonModule,MatTableModule],    
-  templateUrl: './fixture.component.html',
-  styleUrls: ['./fixture.component.css']
+    selector: 'app-fixture',
+    imports: [MatTabsModule, MatListModule, MatIconModule, MatExpansionModule, CommonModule, MatTableModule],
+    templateUrl: './fixture.component.html',
+    styleUrls: ['./fixture.component.css']
 })
 export class FixtureComponent implements OnInit {
   weeks: any[] = [];

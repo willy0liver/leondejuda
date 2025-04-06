@@ -6,10 +6,9 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [RouterModule, CommonModule],
-  template: `
+    selector: 'app-header',
+    imports: [RouterModule, CommonModule],
+    template: `
     <header class="home-header">
       <div class="logo">
         <img src="assets/Logo.png" alt="León de Judá Logo" />
@@ -40,7 +39,7 @@ import { Observable } from 'rxjs';
       </nav>
     </header>
   `,
-  styles: [`
+    styles: [`
     .home-header {
       display: flex;
       justify-content: space-between;
@@ -164,7 +163,7 @@ import { Observable } from 'rxjs';
       background-color: #f0b917;
       color: white;
     }
-  `],
+  `]
 })
 export class HeaderComponent {
   isAuthenticated = this.authService.isAuthenticated$;

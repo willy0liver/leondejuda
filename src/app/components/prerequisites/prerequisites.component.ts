@@ -11,11 +11,10 @@ import { CommonModule } from '@angular/common'; // ¡Añadir esta importación!
 import { Player, PlayerWithAverage } from '../../models/player';
 
 @Component({
-  selector: 'app-prerequisites',
-  standalone: true,
-  imports: [MatTabsModule, MatTableModule, CommonModule, MatTooltipModule, MatListModule, MatIconModule, MatExpansionModule, MatCardModule],
-  templateUrl: './prerequisites.component.html', 
-  styleUrls: ['./prerequisites.component.scss']
+    selector: 'app-prerequisites',
+    imports: [MatTabsModule, MatTableModule, CommonModule, MatTooltipModule, MatListModule, MatIconModule, MatExpansionModule, MatCardModule],
+    templateUrl: './prerequisites.component.html',
+    styleUrls: ['./prerequisites.component.scss']
 })
 export class PrerequisitesComponent {
   displayedColumns: string[] = ['nro','nombre', 'AP', 'CC', 'RF', 'CI', 'RT', 'promedio'];
